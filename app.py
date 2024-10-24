@@ -1,10 +1,13 @@
 import os
 
 import markdown2
+from markdown2 import Markdown
 from flask import Flask, render_template, request, session, make_response, redirect, url_for
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
+markdowner = Markdown()
+
 
 @app.route('/')
 def index():
@@ -59,12 +62,9 @@ def specialty_description(specialty):
     }
 
     description = descriptions.get(specialty, 'Описание не найдено.')
-
-    # Преобразуем Markdown в HTML с помощью markdown2
-    description_html = markdown2.markdown(description)
+    description_html = markdowner.convert(description)
 
     return render_template('specialty.html', specialty=specialty, description=description_html)
-
 
 
 @app.route('/specialties')
