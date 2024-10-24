@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Описание специальности{% endblock %}
+
+{% block content %}
+<h1>Описание специальности: {{ specialty }}</h1>
+
+<a href="{{ url_for('specialties') }}" class="btn btn-secondary mb-3">Назад</a>
+
+<!-- Отображаем описание специальности -->
+<div class="content">
+    {{ description|safe }}
+</div>
+{% endblock %}

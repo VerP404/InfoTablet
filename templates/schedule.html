@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Расписание{% endblock %}
+
+{% block content %}
+    <h1>Расписание</h1>
+
+    <!-- Кнопка "Назад" -->
+    <a href="{{ url_for('index') }}" class="btn btn-secondary mb-3">Назад</a>
+
+    <!-- Отображение выбранного корпус -->
+
+    {% if selected_building %}
+        <p><strong>Корпус:</strong> {{ selected_building }}</p>
+    {% else %}
+        <p><strong>Корпус не выбран. Пожалуйста, выберите корпус в настройках.</strong></p>
+    {% endif %}
+    <!-- Отображение выбранного отделения -->
+    {% if selected_department %}
+        <p><strong>Отделение:</strong> {{ selected_department }}</p>
+    {% else %}
+        <p><strong>Отделение не выбрано. Пожалуйста, выберите отделение в настройках.</strong></p>
+    {% endif %}
+    <table class="table table-striped table-dark">
+        <thead>
+        <tr>
+            <th scope="col">Врач</th>
+            <th scope="col">Специальность</th>
+            <th scope="col">Свободные слоты сегодня</th>
+            <th scope="col">Свободные слоты на 14 дней</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in schedule %}
+            <tr>
+                <td>{{ item.doctor }}</td>
+                <td>{{ item.specialty }}</td>
+                <td>{{ item.today_slots }}</td>
+                <td>{{ item.next_14_days }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

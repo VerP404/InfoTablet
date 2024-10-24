@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Аутентификация{% endblock %}
+
+{% block content %}
+<h1>Введите пин-код для доступа к настройкам</h1>
+
+{% if error %}
+<div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+
+<form method="post">
+    <div class="mb-3">
+        <label for="pin" class="form-label">Пин-код:</label>
+        <input type="password" class="form-control" id="pin" name="pin" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Войти</button>
+</form>
+{% endblock %}

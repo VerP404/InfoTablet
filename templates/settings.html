@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Настройки{% endblock %}
+
+{% block content %}
+    <h1>Настройки</h1>
+
+    {% if success %}
+        <div class="alert alert-success">Настройки сохранены!</div>
+    {% endif %}
+
+    <form method="post">
+        <div class="mb-3">
+            <label for="building" class="form-label">Выберите корпус:</label>
+            <select class="form-select" id="building" name="building">
+                <option value="Корпус 1" {% if building == 'Корпус 1' %}selected{% endif %}>Корпус 1</option>
+                <option value="Корпус 2" {% if building == 'Корпус 2' %}selected{% endif %}>Корпус 2</option>
+                <!-- Добавьте больше корпусов по необходимости -->
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="department" class="form-label">Выберите отделение:</label>
+            <select class="form-select" id="department" name="department">
+                <option value="Кардиология" {% if department == 'Кардиология' %}selected{% endif %}>Кардиология</option>
+                <option value="Хирургия" {% if department == 'Хирургия' %}selected{% endif %}>Хирургия</option>
+                <option value="Неврология" {% if department == 'Неврология' %}selected{% endif %}>Неврология</option>
+                <!-- Добавьте больше отделений по необходимости -->
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="color_scheme" class="form-label">Выберите цветовую схему:</label>
+            <select class="form-select" id="color_scheme" name="color_scheme">
+                <option value="default" {% if color_scheme == 'default' %}selected{% endif %}>По умолчанию</option>
+                <option value="dark" {% if color_scheme == 'dark' %}selected{% endif %}>Тёмная</option>
+                <option value="light" {% if color_scheme == 'light' %}selected{% endif %}>Светлая</option>
+                <!-- Добавьте больше схем по необходимости -->
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Сохранить настройки</button>
+    </form>
+{% endblock %}

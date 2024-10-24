@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Функционал{% endblock %}
+
+{% block content %}
+<h1>Функциональные обязанности врача-терапевта</h1>
+
+<!-- Кнопка "Назад" -->
+<a href="{{ url_for('index') }}" class="btn btn-secondary mb-3">Назад</a>
+
+<!-- Отображаем преобразованный HTML-контент -->
+<div class="content">
+    {{ functionality_description|safe }}
+</div>
+{% endblock %}

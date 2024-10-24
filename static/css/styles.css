@@ -1,0 +1,116 @@
+body.bg-purple {
+    background-color: #6f42c1; /* Фиолетовый цвет Bootstrap */
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-custom {
+    background-color: #ffffff;
+    color: #6f42c1;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.btn-custom:hover {
+    background-color: #e9ecef;
+    color: #6f42c1;
+}
+
+.btn-secondary {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    color: white;
+}
+
+.form-select {
+    background-color: #6f42c1;
+    color: white;
+    border: 1px solid #ffffff;
+}
+
+.form-select:focus {
+    background-color: #6f42c1;
+    color: white;
+    box-shadow: none;
+}
+
+/* Стили для контента */
+.content p {
+    margin-bottom: 1em;
+}
+
+.content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.content li {
+    margin-bottom: 0.5em;
+}
+
+.content strong, .content b {
+    font-weight: bold;
+}
+
+.content h1, .content h2, .content h3 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.content {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+
+/* Тёмная схема */
+.dark-scheme {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+.dark-scheme .navbar {
+    background-color: #212529;
+}
+
+.dark-scheme .btn, .dark-scheme .form-control, .dark-scheme .form-select {
+    background-color: #495057;
+    color: #f8f9fa;
+    border-color: #6c757d;
+}
+
+/* Светлая схема */
+.light-scheme {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.light-scheme .navbar {
+    background-color: #e9ecef;
+}
+
+.light-scheme .btn, .light-scheme .form-control, .light-scheme .form-select {
+    background-color: #ffffff;
+    color: #212529;
+    border-color: #ced4da;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 100%;
+    text-align: center;
+    color: white; /* Белый текст */
+    font-size: 0.9em;
+    background-color: transparent; /* Без фона */
+}
+

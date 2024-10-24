@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+    <div class="text-center">
+        <h1>Добро пожаловать!</h1>
+
+        <!-- Добавление текста с организацией, корпусом и отделением -->
+        <p>{{ organization_name }} - {{ request.cookies.get('building') }}: {{ request.cookies.get('department') }}</p>
+
+        <a href="{{ url_for('schedule') }}" class="btn btn-custom btn-lg w-100">Расписание</a>
+        <a href="{{ url_for('specialties') }}" class="btn btn-custom btn-lg w-100">Функционал</a>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Выбор специальности{% endblock %}
+
+{% block content %}
+<h1>Выберите специальность</h1>
+
+<!-- Кнопка "Назад" -->
+<a href="{{ url_for('index') }}" class="btn btn-secondary mb-3">Назад</a>
+
+<div class="list-group">
+    {% for specialty in specialties %}
+    <a href="{{ url_for('specialty_description', specialty=specialty) }}" class="list-group-item list-group-item-action">
+        {{ specialty }}
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}
