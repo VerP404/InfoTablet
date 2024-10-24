@@ -50,3 +50,7 @@ openssl x509 -req -in server_gp3.csr -signkey key_gp3.pem -out cert_gp3.pem -day
 ```
 openssl x509 -in cert_gp3.pem -text -noout
 ```
+
+```
+openssl x509 -outform der -in cert_gp3.pem -out cert_gp3.crt
+```
