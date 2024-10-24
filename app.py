@@ -115,4 +115,5 @@ def settings_auth():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5020, ssl_context=('cert.pem', 'key.pem'))
+    # app.run(debug=True, host='0.0.0.0', port=5020, ssl_context=('cert.pem', 'key.pem'))
+    app.run(debug=True, host='0.0.0.0', port=5020)
